@@ -6,10 +6,13 @@
 
 //Inventare una lista della spesa
 const list = ["pane", "latte", "uova", "zucchero"];
-
+const listElement = document.getElementById("list");
 //Stampo in console la lista
+let items = "";
+
 let i = 0;
 while (i < list.length) {
-  console.log(list[i]);
+  items += `<li>${list[i]}</li> `;
   i++;
 }
+listElement.innerHTML = items;
